@@ -1,5 +1,11 @@
 <html>
   <head>
+    <script>
+      MathJax.Hub.Config({
+	  jax: ["input/TeX","output/HTML-CSS"],
+	  displayAlign: "left"
+      });
+    </script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   </head>
@@ -13,10 +19,10 @@
     <p>
       <b>Proof:</b> Consider the set \(S = \{ ax + by | x, y \in \mathbb{Z}, ax + by \gt 0\}\). Observe that \(ax + by \in \mathbb{Z}\) as \(a, b, x, y \in \mathbb{Z}\), therefore \(\mathit{S}\) is a non-empty set of integers. The Well-Ordering principle requires that \(\mathit{S}\) have a minimum element \(d = au + bv\).
 
-      <p>To prove the identity, it would suffice to prove that the minimum element \(d\) is a divisor of both \(a\) & \(b\) and that every other common divisor of is smaller than \(d\).</p>
+      <p>To prove the identity, it would suffice to prove that the minimum element \(d\) is a divisor of both \(a\) & \(b\) and that every other common divisor of \(a\) & \(b\) is smaller than \(d\).</p>
 
     <p>
-      Consider the Eucledean division of \(a\) by the minimum element of \(\mathit{S} d\), which allows us to write $$ a = nd + r \label{1}\tag{1} $$ Where \(n\) is the quotient and \(r\) is the remainer. Expanding \(d = au + bv\) in (\ref{1}), we can express \(r = a(1-n)u + b(-nv)\), which is of the general form \(ax + by\), implying \(r \in \mathit{S} \cup \{0\}\). By definition the remainder \(r\) has to be smaller than the divisor \(d\), and \(d\) is already the minimum element of \(S\), therefore \(r = 0\), implying that \(d\) is a divisor of \(a\). By the same argument we can show that that \(d\) is a divisor of \(b\).
+      Consider the Euclidean division of \(a\) by the minimum element of \(\mathit{S}\) \(d\), which allows us to write $$ a = nd + r \label{1}\tag{1} $$ Where \(n\) is the quotient and \(r\) is the remainer. Expanding \(d = au + bv\) in (\ref{1}), we can express \(r = a(1-n)u + b(-nv)\), which is of the general form \(ax + by\), implying \(r \in \mathit{S} \cup \{0\}\). By definition the remainder \(r\) has to be smaller than the divisor \(d\), and \(d\) is already the minimum element of \(S\), therefore \(r = 0\), implying that \(d\) is a divisor of \(a\). By the same argument we can show that that \(d\) is a divisor of \(b\).
     </p>
 
     <p>Consider a common divisor \(e\) of \(a\) & \(b\) such that \(a = ke\) & \(b = le\), then we can express \(d\) as:
@@ -29,6 +35,6 @@
       $$
       i.e, \(e\) is a divisor of \(d\), implying that \(e \lt d\).
 
-      We have therefore demonstrated that (\d\) can be expressed as \(ax + by\), and that \(d\) is a common divisior of \(a\) & \(b\), and every other common divisor is smaller than \(d\), i.e. \(d\) is \(gcd(a, b)\) hence proving Bezout's Identity.
+      We have therefore demonstrated that \(d\) can be expressed as \(ax + by\), and that \(d\) is a common divisior of \(a\) & \(b\), and every other common divisor is smaller than \(d\), i.e. \(d\) is \(gcd(a, b)\) hence proving Bezout's Identity.
   </body>
 </html>
