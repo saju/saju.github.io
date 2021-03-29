@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <script>
+      MathJax.Hub.Config({
+	  jax: ["input/TeX","output/HTML-CSS"],
+	  displayAlign: "left"
+      });
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+      window.MathJax = {
+	  tex: {
+	      inlineMath: [['$', '$'], ['\\(', '\\)']]
+	  }
+      };
+    </script>
+  </head>
+  <body>
+    <h3>
+      Proof of Fermat's Little Theorem
+    </h3>
+    <p>
+      <b>Statement:</b> If $p$ is a prime number and $a$ is an integer such that $a\not\equiv 0\pmod p$ then $a^{p-1}\equiv 1\pmod p$
+    </p>
+
+    <p>
+      <b>Proof:</b> Consider the set $S = \{a, 2a, 3a, ..., (p-1)a\}$. The $k^{th}$ element of this set (i.e $ka$) will leave a least residue between $1$ & $(p-1) \pmod p$. This is because every member of $S$ is formed by the product of $a \times \{1, 2, 3, ..., (p-1)\}$, and since $a\not\equiv0\pmod p$ by definition and $\{1, 2, 3, ..., (p-1)\}$ is the least residue system of $p$, therefore no member of $S$ is $0\pmod p$.
+    </p>
+
+    <p>
+      Every element of $S$ will leave a unique least residue $\pmod p$. Assume this were not the case and elements $ka$ and $ja$ leave the same residue, i.e assume $ka\equiv ja\pmod p$. But this just implies $k \equiv j\pmod p$. Since both $k \lt p$ & $j \lt p$, this implies that $k = j$; i.e no two elements of $S$ can leave the same least residue, i.e. the least residues left behind my members of $S \pmod p$ will be some permutation of the least residue system. This implies that the product of all members of $S$ will be congruent to the least residue system $\pmod p$. i.e
+      $$\prod_{k=1}^{p-1} ka \equiv \prod_{k=1}^{p-1} k \pmod p$$
+      Collecting all the $a$ terms in the L.H.S we get:
+      $$a^{p-1}\prod_{k=1}^{p-1} k \equiv \prod_{k=1}^{p-1} k \pmod p$$
+      Cancelling out the contribution of $\prod_{k=1}^{p-1}k$, we get our required result:
+      $$a^{p-1} \equiv 1\pmod p$$
+    </p>
+    </p>
+  </body>
+</html>
